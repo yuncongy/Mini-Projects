@@ -27,6 +27,12 @@ serverP.c - handle the portfolio of each user. Update the user's portfolio durin
 Makefile - compile all the necessary .c files using make all, and remove executables using make clean
 
 
+How To Run:
+1. Use make all to compile all necessary files
+2. Open 5 terminal/cmd prompt
+3. Start servers in this order ./ServerM --> ./ServerA --> ./ServerP --> ./ServerQ --> ./client
+4. Messages will be displayed for each server booting up with its port #
+
 
 Message exchanged
 - TCP Connection: (client, Server M)
