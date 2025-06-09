@@ -4,8 +4,12 @@ Project Description:
 
 This project implements a client-server stock trading system using both TCP and UDP protocols. The system is designed to handle user authentication, portfolio management, stock quoting, buying, and selling functionalities.
 
-Key Features:
+TCP connection between client and server M (Main Server). Port # dynamically allocated. 
+UDP connection between server M and server A, P, Q (Authentication, Portfolio, Quote). Port # fixed. 
+* client can only communicate with server M. M forwards request to designated servers. *
 
+
+Key Features:
 User Authentication: Supports user login with username and password.
 Stock Quoting: Allows clients to request quotes for all available stocks or a specific stock.
 Portfolio Management: Tracks user stock holdings and calculates profit/loss.
@@ -25,7 +29,7 @@ Makefile - compile all the necessary .c files using make all, and remove executa
 
 
 Message exchanged
-TCP Connection: (client, Server M)
+- TCP Connection: (client, Server M)
 LOGIN,<username>,<password>
 LOGIN_SUCCESS
 LOGIN_FAILED
@@ -46,7 +50,7 @@ BUY_SUCCESS,<user>,<stock>,<shares>
 BUY_FAIL,<reason>
 stock not found
 
-UDP Connection: (Server M, P, Q, A)
+- UDP Connection: (Server M, P, Q, A)
 LOGIN,<username>,<encrypted_password>
 1 or 0
 QUOTE_ALL
