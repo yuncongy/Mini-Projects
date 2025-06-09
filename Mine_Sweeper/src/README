@@ -1,1 +1,31 @@
-Main function is located in MineSweeper.java
+Minesweeper
+This is a classic Minesweeper game implemented in Java, featuring a graphical user interface (GUI). The game allows players to uncover squares, mark potential mine locations, and aims to provide an engaging and intuitive user experience.
+
+Features
+- Standard Minesweeper Gameplay: Uncover squares, mark mines, and clear the board without hitting a mine.
+- Adjustable Board Size and Mine Count: Easily configured for different game difficulties (currently 9x9 with 10 mines).
+- First Click Guarantee: The first square opened in a random game will never be a mine, ensuring a fair start.
+- Game Status Indicators: Displays remaining mine guesses and a clear message for win/loss conditions.
+
+Program Structure
+The project follows the Model-View-Controller (MVC) design pattern to separate concerns and enhance maintainability:
+
+Model: Manages the game data and logic.
+MineField.java: Represents the actual minefield, storing mine locations and providing methods to calculate adjacent mines.
+VisibleField.java: Represents the player's view of the minefield, tracking the status of each square (covered, uncovered, guessed, etc.) and handling game state transitions (win/loss).
+View & Controller: Handles the graphical display and user interactions.
+GameBoardPanel.java: This is the main GUI component. It orchestrates the display of the minefield grid and other game controls. It contains inner classes:
+SquareView: A JLabel that visually represents a single square on the board, updating its appearance based on its status in the VisibleField.
+SquareListener: A MouseAdapter that acts as the controller for individual squares, processing left (uncover) and right (cycle guess) clicks.
+
+Main Application: (Run This)
+MineSweeper.java: The entry point of the application, responsible for setting up the main window and initiating the game.
+
+Implementation Details
+GUI Framework: Developed using Java Swing for the graphical components.
+
+Mine Placement:
+For random games, mines are placed after the user's first click, guaranteeing the initial square is safe.
+A HashSet is used in MineField to efficiently manage and ensure unique random mine locations.
+Recursive Uncovering: When an empty square (no adjacent mines) is uncovered, the game automatically reveals all surrounding empty squares and their boundaries (squares with adjacent mines) through a recursive algorithm.
+Game State Management: The VisibleField class is responsible for tracking the game's progress, determining win/loss conditions, and updating the visible state of the squares accordingly.
