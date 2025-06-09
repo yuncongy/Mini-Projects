@@ -1,4 +1,4 @@
-# 🚀 littleProjects
+# 🚀 Mini-Projects
 
 This repository is a collection of my personal coding projects, showcasing various skills and interests.
 
