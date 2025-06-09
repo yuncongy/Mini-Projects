@@ -1,5 +1,5 @@
 Minesweeper
-This is a classic Minesweeper game implemented in Java, featuring a graphical user interface (GUI). The game allows players to uncover squares, mark potential mine locations, and aims to provide an engaging and intuitive user experience.
+This is a classic Minesweeper game implemented in Java, featuring a GUI. The game allows players to uncover squares, mark potential mine locations, and aims to provide an engaging and intuitive user experience.
 
 Features
 - Standard Minesweeper Gameplay: Uncover squares, mark mines, and clear the board without hitting a mine.
